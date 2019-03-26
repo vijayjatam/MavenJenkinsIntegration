@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CLASS_NAME="com.java.example.MyFirstExample"
 echo "Class Name: ${CLASS_NAME}"
