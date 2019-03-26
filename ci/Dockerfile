@@ -12,9 +12,9 @@ ENV JAR_FILE $jar_file
 
 COPY ${jar_file} ci/docker_entrypoint.sh $HW_HOME
 
-CMD ["chmod", "+x", "/opt/docker_entrypoint.sh"]
+RUN ["chmod", "+x", "/opt/docker_entrypoint.sh"]
 
-ENTRYPOINT /opt/docker_entrypoint.sh
+ENTRYPOINT ["sh", "/opt/docker_entrypoint.sh"]
 
 # ADD HelloWorld.class $HW_HOME/
 
