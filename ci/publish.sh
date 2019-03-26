@@ -49,7 +49,7 @@ docker info
 
 # We always want to build the Docker image, even when we decide it should not be pushed
 echo "Building Docker image ${DOCKER_IMAGE}..."
-docker build --file ./ci/Dockerfile --build-arg jar_file=target/${NAME}-${VERSION}.jar --tag "${DOCKER_IMAGE}:${BUILD_NUMBER}" .
+docker build --file ./ci/Dockerfile --build-arg jar_file=${NAME}-${VERSION}.jar --tag "${DOCKER_IMAGE}:${BUILD_NUMBER}" .
 
 echo "Publishing Docker image ${DOCKER_IMAGE}"
 docker tag "${DOCKER_IMAGE}:${BUILD_NUMBER}" "${DOCKER_IMAGE}:${DOCKER_TAG}"
