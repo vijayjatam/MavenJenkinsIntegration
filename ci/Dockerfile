@@ -14,7 +14,7 @@ COPY ${jar_file} ci/docker_entrypoint.sh $HW_HOME
 
 RUN ["chmod", "+x", "/opt/docker_entrypoint.sh"]
 
-ENTRYPOINT ["sh", "/opt/docker_entrypoint.sh"]
+ENTRYPOINT ["sh", "/opt/docker_entrypoint.sh", "$jar_file"]
 
 # ADD HelloWorld.class $HW_HOME/
 
