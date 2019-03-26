@@ -25,9 +25,15 @@ pipeline {
             }
         }
         stage('Deliver') {
+                    steps {
+                        sh 'chmod 777 ./ci/deploy.sh'
+                        sh './ci/deploy.sh'
+                    }
+                }
+        stage('Docker') {
             steps {
-                sh 'chmod 777 ./ci/deploy.sh'
-                sh './ci/deploy.sh'
+                sh 'chmod 777 ./ci/publish.sh'
+                sh './ci/publish.sh'
             }
         }
     }
