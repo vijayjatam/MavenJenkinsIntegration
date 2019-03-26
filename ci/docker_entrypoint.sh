@@ -6,4 +6,5 @@ echo "JAR_FILE: ${JAR_FILE}"
 
 cd /opt
 ls
-java -cp /opt/${JAR_FILE}.jar ${CLASS_NAME}
+
+java -cp /opt/${JAR_FILE} ${CLASS_NAME}
