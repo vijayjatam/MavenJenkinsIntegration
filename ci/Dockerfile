@@ -1,7 +1,7 @@
 FROM openjdk:8u131-jre-alpine
 LABEL maintainer="vijay.jatam.consultant@nielsen.com"
 
-ENV HW_HOME=/opt
+ENV HW_HOME=/opt/
 WORKDIR $HW_HOME
 
 # jar file argument
